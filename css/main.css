@@ -1,0 +1,24 @@
+/* reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+/* ESTILOS GENERALES */
+/* estilos body */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #F5F5DC}
+
+.body-grid{
+    /*height: 100vh;*/
+    color: #4d4d4d;
+    text-shadow: 2px 2px #fff
+}
+
+.cardProductos{
+    color: #4d4d4d;
+    border: 1px solid black;
+}
