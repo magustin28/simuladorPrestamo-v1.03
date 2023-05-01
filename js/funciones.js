@@ -79,7 +79,7 @@ function selectorFiltro(funcionEdad) {
     return arraySeleccionado;
 }
 
-//Mensaje de Tipos de Préstamos de acuedo a la edad
+//Mensaje de Tipos de Préstamos de acuerdo a la edad
 function mensajePrestamoEdad(valor, filtro) {
     const mensajePrestamoEdad = document.querySelector('#mensajePrestamoEdad');
     mensajePrestamoEdad.innerHTML = `De acuerdo a su edad: ${edad(valor)} años, puede acceder a las siguentes opciones de préstamos:`;
@@ -94,7 +94,7 @@ function mensajePrestamoEdad(valor, filtro) {
     });
 }
 
-//Listado de Tipos de Préstamos de acuedo a la edad
+//Listado de Tipos de Préstamos de acuerdo a la edad
 function listadoPrestamos(filtro) {
     const listadoPrestamos = document.querySelector('#listadoPrestamos');
     listadoPrestamos.innerHTML = `<option></option>`;
