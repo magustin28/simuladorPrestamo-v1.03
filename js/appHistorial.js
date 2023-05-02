@@ -5,6 +5,7 @@ console.log(historialSimulacionesGuardadas)
 const verHistorial = document.querySelector('#verHistorial');
 const verSimulacion = document.querySelector('#verSimulacion');
 
+
 if (historialSimulacionesGuardadas.length == 0) {
     verHistorial.innerHTML = `
         <p class="col-9 mb-0 me-2 text-center fs-5">No tiene historial para revisar</p>
@@ -34,7 +35,7 @@ if (historialSimulacionesGuardadas.length == 0) {
 
         verSimulacion.innerHTML = `
             <p class="mx-4">Detalles de la simulación guardada:</p>
-            <div class="row d-flex justify-content-evenly p-3 border border-black">
+            <div class="row d-flex justify-content-evenly p-3 border border-secondary header-card">
                 <div class="col-5">
                     <p>* Fecha de Simulacion: ${buscarArraysPorBuscador(historialSimulacionesGuardadas, (document.querySelector('#listadoHistorial').value)).fechaSimulacion}</p>
                     <p>* Fecha de Nacimiento: ${buscarArraysPorBuscador(historialSimulacionesGuardadas, (document.querySelector('#listadoHistorial').value)).fechaNacimiento}</p>
@@ -96,18 +97,6 @@ if (historialSimulacionesGuardadas.length == 0) {
         alert('Se elimino su historial de simulaciones\nGracias por visitarnos. Esperamos que vuelta pronto!');
         location.reload();
     });
-
-
-
-
-
-
-
-
-
-
-
-
 }/*
 
 

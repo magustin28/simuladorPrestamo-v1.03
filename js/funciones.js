@@ -156,7 +156,7 @@ function crearCopiaSimulacion(fechaNacimiento) {
 //Consultar historial
 function listadoHistorial(filtro) {
     const listadoHistorial = document.querySelector('#listadoHistorial');
-    listadoHistorial.innerHTML = `<option data-id="0"></option>`;
+    listadoHistorial.innerHTML = `<option></option>`;
 
     filtro.forEach((simulacion) => {
         listadoHistorial.innerHTML += `
