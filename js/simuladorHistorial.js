@@ -1,5 +1,4 @@
 // Objeto Historial Simulador
-
 class SimuladorHistorial {
 
     constructor(id, fechaSimulacion, fechaNacimiento, lineaPrestamo, edad, montoPrestamo, tasaPrestamo, cantidadCuotas, valorCuota, interes, seguro, iva, importeTotal, cft, buscador) {

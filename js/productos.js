@@ -1,5 +1,4 @@
 // Objeto Producto
-
 class Producto{
 
     constructor (id, nombre, disponible) {

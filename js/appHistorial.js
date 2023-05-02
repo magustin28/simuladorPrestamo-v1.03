@@ -1,10 +1,7 @@
 consultaHistorial();
-console.log(historialSimulacionesGuardadas.length)
-console.log(historialSimulacionesGuardadas)
 
 const verHistorial = document.querySelector('#verHistorial');
 const verSimulacion = document.querySelector('#verSimulacion');
-
 
 if (historialSimulacionesGuardadas.length == 0) {
     verHistorial.innerHTML = `
@@ -82,12 +79,15 @@ if (historialSimulacionesGuardadas.length == 0) {
         historialSimulacionesGuardadas.splice(indiceABorrar,1);
         localStorage.setItem('historialSimulaciones', JSON.stringify(historialSimulacionesGuardadas));
         alert('Se ha eliminado la simulación del historial');
-        location.reload();
+        verSimulacion.innerHTML = ``;
+        listadoHistorial(historialSimulacionesGuardadas);
     });
 
     
     limpiarConsulta.addEventListener('click', function () {
-        location.reload();
+        
+        verSimulacion.innerHTML = ``;
+        listadoHistorial(historialSimulacionesGuardadas);
     });
 
     borrarHistorial.addEventListener('click', function () {

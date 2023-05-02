@@ -1,5 +1,4 @@
 // Objeto Préstamo
-
 class Prestamo {
 
     constructor(id, nombre, edadMinima, edadMaxima, montoMinimo, montoMaxino, garantia, tipoGarantia, tasa, seguro, iva, cuotasMinimo, cuotasMaximo) {
@@ -18,7 +17,6 @@ class Prestamo {
         this.cuotasMaximo = cuotasMaximo;
     }
 
-
     //Cálculo Interes
     calculoInteres = function (montoPrestamo, cantidadCuotas) {
         let interes = montoPrestamo * this.tasa / 12 * cantidadCuotas;
@@ -32,7 +30,7 @@ class Prestamo {
     }
 
     //Cálculo IVA
-     calculoIva = function (montoPrestamo, cantidadCuotas) {
+    calculoIva = function (montoPrestamo, cantidadCuotas) {
         let iva = (this.calculoInteres(montoPrestamo, cantidadCuotas) + this.calculoSeguro(montoPrestamo)) * this.iva;
         return iva;
     }

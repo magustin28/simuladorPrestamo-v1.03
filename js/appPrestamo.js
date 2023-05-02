@@ -111,13 +111,13 @@ consultarEdad.addEventListener('click', function () {
                     if ((montoPrestamo.value <= buscarArraysPorNombre(tiposPrestamos, (document.querySelector('#listadoPrestamos').value)).montoMaxino) && (montoPrestamo.value >= buscarArraysPorNombre(tiposPrestamos, (document.querySelector('#listadoPrestamos').value)).montoMinimo) && (cantidadCuotas.value <= buscarArraysPorNombre(tiposPrestamos, (document.querySelector('#listadoPrestamos').value)).cuotasMaximo) && (cantidadCuotas.value >= buscarArraysPorNombre(tiposPrestamos, (document.querySelector('#listadoPrestamos').value)).cuotasMinimo) && (montoPrestamo.value !== 0) && (cantidadCuotas.value !== 0)) {
 
                         let componentesFecha = fechaN.split("-");
-                        let date = `${componentesFecha[2]}/${componentesFecha[1]}/${componentesFecha[0]}`;
+                        let nacimientoFecha = `${componentesFecha[2]}/${componentesFecha[1]}/${componentesFecha[0]}`;
 
                         resultadoSimulador.innerHTML = `
                             <p class="mx-4">Le detallamos la simulación de su préstamo:</p>
                             <div class="row d-flex justify-content-evenly p-3 border border-secondary header-card">
                                 <div class="col-5">
-                                    <p class="mb-2">* Fecha de Nacimiento: ${date}</p>
+                                    <p class="mb-2">* Fecha de Nacimiento: ${nacimientoFecha}</p>
                                     <p class="mb-2">* Edad: ${edad(fechaN)} años</p>
                                     <p class="mb-2">* Línea: ${buscarArraysPorNombre(tiposPrestamos, (document.querySelector('#listadoPrestamos').value)).nombre}</p>
                                     <p class="mb-2">* Nivel de Ingreso: ${formatoPesos(parseInt(nivelIngresos.value))}</p>
@@ -165,16 +165,15 @@ consultarEdad.addEventListener('click', function () {
                         const guardarSimulacion = document.querySelector('#guardarSimulacion');
                         const reinicar = document.querySelector('#reinicar');
 
-                        reinicar.addEventListener('click', function () {
-                            location.reload();
-                        });
-
                         guardarSimulacion.addEventListener('click', function () {
-                            crearCopiaSimulacion(date);
+                            crearCopiaSimulacion(nacimientoFecha);
                             alert('Se guardo una copia de su simulación\nGracias por visitarnos. Esperamos que vuelta pronto!');
-                            location.reload();
+                            simulador.innerHTML = ``;
                         });
 
+                        reinicar.addEventListener('click', function () {
+                            simulador.innerHTML = ``;
+                        });
 
                     } else {
                         resultadoSimulador.innerHTML = `
