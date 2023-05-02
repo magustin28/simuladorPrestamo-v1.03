@@ -169,10 +169,12 @@ consultarEdad.addEventListener('click', function () {
                             crearCopiaSimulacion(nacimientoFecha);
                             alert('Se guardo una copia de su simulación\nGracias por visitarnos. Esperamos que vuelta pronto!');
                             simulador.innerHTML = ``;
+                            document.querySelector('#fechaN').value = '';
                         });
 
                         reinicar.addEventListener('click', function () {
                             simulador.innerHTML = ``;
+                            document.querySelector('#fechaN').value = '';
                         });
 
                     } else {
