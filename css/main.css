@@ -3,22 +3,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid black;
+   /*border: 1px solid black;*/
 }
 
 /* ESTILOS GENERALES */
 /* estilos body */
 body {
     font-family: "Roboto", sans-serif;
-    background-color: #F5F5DC
+    background-color: #F5F5DC;
 }
 
 .body-grid{
     color: #4d4d4d;
+    height: 100vh;
+    flex: 1;
+}
+
+.header-card{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) ;
 }
 
 .cardProductos{
     height: 7.5rem;
     border-radius: 5px;
-    border: 1px solid black;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) ;
+}
+
+/* estilos footer */
+
+.footer{
+    padding: 1.5rem;
+    text-align: center;
+    font-style: italic;
 }
